@@ -19,7 +19,7 @@ const results = Keyfob.load({ path: 'files' });
 
 you would get this result:
 
-```json
+```js
 {
   one: 'contents of one.txt',
   deeper: {
