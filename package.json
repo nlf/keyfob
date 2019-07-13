@@ -4,15 +4,12 @@
   "description": "build a tree hierarchy of files from a directory and run a method on them",
   "main": "lib/index.js",
   "scripts": {
-    "test": "lab -a code -t 100 -L"
+    "test": "exit 1"
   },
   "keywords": [],
   "author": "Nathan LaFreniere <quitlahok@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "code": "^3.0.1",
-    "eslint-config-andyet": "^2.0.0",
-    "lab": "^10.8.2",
     "mock-fs": "^3.9.0"
   },
   "dependencies": {
