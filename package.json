@@ -4,13 +4,16 @@
   "description": "build a tree hierarchy of files from a directory and run a method on them",
   "main": "lib/index.js",
   "scripts": {
-    "test": "exit 1"
+    "lint": "standard",
+    "test": "jest",
+    "posttest": "npm run lint"
   },
   "keywords": [],
   "author": "Nathan LaFreniere <quitlahok@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "mock-fs": "^3.9.0"
+    "jest": "^24.8.0",
+    "standard": "^13.0.2"
   },
   "dependencies": {
     "minimatch": "^3.0.2"

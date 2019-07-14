@@ -29,19 +29,29 @@ you would get this result:
 }
 ```
 
+when using the `flat` option (`const results = Keyfob.load({ path: 'files', flat: true })`) you would get this result:
+
+```js
+{
+  one: 'contents of one.txt',
+  'deeper/two': 'contents of two.txt',
+  another: 'contents of another.txt'
+}
+```
+
 ### Options
 
-`path`: the path to the base directory files should be loaded from
+`root`: the root of the directory tree you wish to load. **required**
 
-`includes`: an array of [minimatch](https://github.com/isaacs/minimatch) patterns that represent files that should be included. defaults to `['**/*']` (all files)
+`flat`: instead of creating a nested object, flatten keys into slash separated names. defaults to `false`
 
-`excludes`: an array of minimatch patterns that should be ignored. defaults to `['node_modules/**', 'bower_components/**']`
+`patterns`: an array of [minimatch](https://github.com/isaacs/minimatch) patterns that represent files that should be included. defaults to `['*']` (all files)
 
-`fn`: the function to run on each file the default fn is this:
+`fn`: the function to run on each file. the default is:
 
 ```js
 function (path) {
-  return Fs.readFileSync(path, 'utf8');
+  return fs.readFileSync(path, 'utf8');
 }
 ```
 
