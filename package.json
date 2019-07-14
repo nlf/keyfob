@@ -1,9 +1,11 @@
 {
   "name": "keyfob",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "build a tree hierarchy of files from a directory and run a method on them",
   "main": "lib/index.js",
-  "files": ["lib/index.js"],
+  "files": [
+    "lib/index.js"
+  ],
   "scripts": {
     "lint": "standard",
     "test": "jest",
